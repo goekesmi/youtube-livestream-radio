@@ -20,7 +20,7 @@ KFI=4
 # Key Frame Interval, uses in the -g calculation
 
 
-# For reason I can not explain, ffmpeg crashes randomly.  This restarts it, forever.
+# For reasons I can not explain, ffmpeg crashes randomly.  This restarts it, forever.
 while true ;
 do
 
