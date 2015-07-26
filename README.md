@@ -1,11 +1,11 @@
 ## Synopsis
 
-Short script to consume audio from a sound card, and stream it with a logo to youtube livestreaming using ffmpeg.
+Short script to consume audio from a sound card, and stream it with a logo to YouTube live streaming using ffmpeg.
 
 ## Motivation
 
-I wanted to be able to stream our local amateur raido repeaters to youtube for the internet to listen to.  Figuring out the
-details of doing an absoultely minimalist job of this took me far too many hours.  Hopefully it will take the next person
+I wanted to be able to stream our local amateur radio repeaters to YouTube for the internet to listen to.  Figuring out the
+details of doing an absolutely minimalist job of this took me far too many hours.  Hopefully it will take the next person
 fewer hours.
 
 ## Installation
