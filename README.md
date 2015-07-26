@@ -1,6 +1,6 @@
 ## Synopsis
 
-Short script to consume audio from a sound card, and stream it with a logo to youtube livestreaming using ffmpeg
+Short script to consume audio from a sound card, and stream it with a logo to youtube livestreaming using ffmpeg.
 
 ## Motivation
 
@@ -11,14 +11,22 @@ fewer hours.
 ## Installation
 
 Clone into a directory.
+
 cp local.config.example local.config
+
 vi local.config # and fill in the blanks.
+
 ./streamer.sh
 
 
 ## Contributors
 
-If it breaks you get to keep both pieces.  Much of this configuration is terrible.  I'm working to make it less terrible.
+If it breaks you get to keep both pieces.  
+
+Much of this configuration is terrible.  
+
+I'm working to make it less terrible.
+
 Pull requests welcome.
 
 ## License
