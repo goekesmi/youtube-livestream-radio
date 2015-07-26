@@ -50,15 +50,25 @@ done;
 # presets faster than superfast result in single color frames, and thus are
 # useless
 
+# -s  426x240
+# Set the output image size to the youtube recommended 16:9 240p resolution.
+# I strongly suggest your $IMAGE be in 16:9 as well, but that is not a requirement.
+# The image will be scaled to fit in the video stream.
+
 # -r $FPS
 # Output frame rate.  As low as possible for this configuration
 
-# -g $(($FPS*4))
+# -g $(($FPS*$KFI))
 # Group of Pictures interval, also known as keyframe interval.
 # youtube maximum permitted is 1 keyframe per 4 seconds.  As it's
 # a static image, I've pushed it to the max.  Youtube recommended
 # is once per 2 seconds.
 
+# -b:v 2500k
+# Big video buffer smooths out the bitrate.
 
+# -af bandpass=f=900:width_type=h:w=600 
+# Bandpass filter centered around human voice.  Takes out some of the hiss
+# that is in analog FM signals.
 
 
