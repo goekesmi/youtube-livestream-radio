@@ -16,7 +16,7 @@ cp local.config.example local.config
 
 vi local.config # and fill in the blanks.
 
-./streamer.sh
+./stream.sh
 
 
 ## Contributors
