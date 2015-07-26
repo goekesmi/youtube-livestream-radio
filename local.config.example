@@ -1,0 +1,14 @@
+
+# Sourced by stream.sh
+# Set the below settings to your settings.
+
+# Youtube primary streaming target
+DESTINATION='rtmp://a.rtmp.youtube.com/live2'
+
+# Youtube stream identifer
+STREAM=''
+
+# The logo you want used for the video stream
+IMAGE='image.png'
+
+
