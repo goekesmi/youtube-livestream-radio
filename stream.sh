@@ -27,7 +27,7 @@ do
 ffmpeg  \
 	-loop 1 -framerate $FPS -i $IMAGE \
 	-f alsa -i hw:0,0 \
-	-af bandpass=f=900:width_type=h:w=600 \
+	-af "pan=mono|c0=FL [t1];[t1] bandpass=f=900:width_type=h:w=600" \
 	-vcodec libx264 -pix_fmt yuv420p -preset superfast -maxrate 100k  -s  426x240 -r $FPS -g $(($FPS*$KFI)) -b:v 2500k \
 	-acodec libmp3lame  -b:a 256k -ar 44100 -bufsize 512k \
 	-f flv $DESTINATION/$STREAM
@@ -67,8 +67,10 @@ done;
 # -b:v 2500k
 # Big video buffer smooths out the bitrate.
 
-# -af bandpass=f=900:width_type=h:w=600 
+# -af "pan=mono|c0=FL [t1]; ...
+# Downmix Stereo to mono, because there's only one actual channel.
+
+# ... [t1] bandpass=f=900:width_type=h:w=600 "
 # Bandpass filter centered around human voice.  Takes out some of the hiss
 # that is in analog FM signals.
-
 
